@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stracture</title>
+    <style>
+        ul>li{
+            list-style: none;
+            display: flex;
+        }
+        ul{
+            display: flex;
+            gap: 50px;
+        }
+      
+        .container{
+             display: grid;
+            grid-template-areas: 
+           "header header header header " 
+           "nav    nav     nav    nav "
+           "main   main    main first-sidebar"
+           "footer footer  footer  footer";
+        }
+        .nav,  .header, .main, .first-sidebar, .footer{
+            border: 2px  solid black;
+        }
+        .nav{
+            grid-area: nav;
+        }
+        .header{
+            grid-area: header;
+        }
+        .main{
+            grid-area: main;
+        }
+        .first-sidebar{
+            grid-area: first-sidebar;
+            height: 400px;
+        }
+        .footer{
+            grid-area: footer;
+        }
+        @media screen and (max-width:576px) {
+            .container{
+                display: grid;
+            grid-template-areas: 
+            "header"
+            "nav"
+            "main"
+            "first-sidebar"
+            "footer";
+            }
+        }
+    </style>
+</head>
+<body>
+   <section class="container">
+    <header class="header">
+        <h1>This Is Heading</h1>
+    </header>
+    <nav class="nav">
+        <ul>
+            <li>Home</li>
+            <li>How its Work</li>
+            <li>About</li>
+            <li>Contact Us</li>
+            <li>Menu</li>
+            <li>Service</li>
+        </ul>
+    </nav>
+    <main class="main">
+        <article>
+            <h1>This First Title </h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero, doloribus quibusdam a non mollitia minus placeat? Recusandae asperiores alias quibusdam neque eaque dolorum quam voluptates cum, architecto dignissimos aspernatur nobis magni ullam maiores unde pariatur enim rerum fugit, voluptas delectus tempore consequuntur? Blanditiis obcaecati delectus tempora eum non ab placeat ducimus porro distinctio iste est nihil temporibus repudiandae omnis repellat doloribus beatae numquam reiciendis officia, quaerat repellendus. Repudiandae dolorem quam sunt itaque! Amet, iusto cumque. Laborum libero ut quidem facilis. Nemo tempora iure blanditiis placeat, enim error eum optio molestias asperiores amet perspiciatis. Accusantium doloremque cumque voluptatum, ab quibusdam autem! Totam vero perspiciatis numquam vel id, earum obcaecati! Porro possimus nihil rerum veritatis neque, earum eaque enim, deserunt adipisci facilis, nemo deleniti totam quo dignissimos ipsa quidem nisi! Eius molestias unde nisi magni, adipisci distinctio ipsa aspernatur! Id veritatis, voluptatibus dolores voluptate natus veniam aliquid dolorum. Modi quam neque quae.</p>
+        </article>
+        <article>
+            <h1>This First Title </h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero, doloribus quibusdam a non mollitia minus placeat? Recusandae asperiores alias quibusdam neque eaque dolorum quam voluptates cum, architecto dignissimos aspernatur nobis magni ullam maiores unde pariatur enim rerum fugit, voluptas delectus tempore consequuntur? Blanditiis obcaecati delectus tempora eum non ab placeat ducimus porro distinctio iste est nihil temporibus repudiandae omnis repellat doloribus beatae numquam reiciendis officia, quaerat repellendus. Repudiandae dolorem quam sunt itaque! Amet, iusto cumque. Laborum libero ut quidem facilis. Nemo tempora iure blanditiis placeat, enim error eum optio molestias asperiores amet perspiciatis. Accusantium doloremque cumque voluptatum, ab quibusdam autem! Totam vero perspiciatis numquam vel id, earum obcaecati! Porro possimus nihil rerum veritatis neque, earum eaque enim, deserunt adipisci facilis, nemo deleniti totam quo dignissimos ipsa quidem nisi! Eius molestias unde nisi magni, adipisci distinctio ipsa aspernatur! Id veritatis, voluptatibus dolores voluptate natus veniam aliquid dolorum. Modi quam neque quae.</p>
+        </article>
+    </main>
+
+    <aside>
+        <div class="first-sidebar">
+            <h1>First Sidebar</h1>
+        </div>
+       
+    </aside>
+    <footer class="footer">
+        <h1>This is Footer</h1>
+    </footer>
+   </section>
+</body>
+</html>
